@@ -43,7 +43,7 @@ st.markdown("---")
 # ============================================================
 @st.cache_data
 def load_data():
-    df = pd.read_csv("D:\Klasifikasi Data Menggunakan XGBoost\kolkata_weather_jan_june_2026.csv")
+    df = pd.read_csv("kolkata_weather_jan_june_2026.csv")
     df['time'] = pd.to_datetime(df['time'])
     df['month'] = df['time'].dt.month
     df['is_rainy'] = (df['rain_sum'] >= 5.0).astype(int)
